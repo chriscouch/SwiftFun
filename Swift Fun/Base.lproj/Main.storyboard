@@ -31,18 +31,48 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ulR-N2-Btp"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H8l-jr-u1o">
+                                <rect key="frame" x="137.66666666666666" y="357" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="YKM-7Q-oqm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1qX-yc-w2d">
+                                <rect key="frame" x="137" y="305" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="epY-5r-TxD"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bad-xO-9xu">
+                                <rect key="frame" x="163" y="211" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Bad-xO-9xu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4bY-VA-ckE"/>
                             <constraint firstItem="KIy-P9-3eO" firstAttribute="top" secondItem="eeq-B1-urK" secondAttribute="bottom" constant="10" id="IXk-GQ-j3R"/>
                             <constraint firstItem="eeq-B1-urK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JL9-yJ-Ij1"/>
                             <constraint firstItem="KIy-P9-3eO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TAO-iG-DI5"/>
                             <constraint firstItem="eeq-B1-urK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bQk-HW-LEq"/>
+                            <constraint firstItem="eeq-B1-urK" firstAttribute="top" secondItem="1qX-yc-w2d" secondAttribute="bottom" constant="60.666666666666686" id="dAp-wN-luO"/>
+                            <constraint firstItem="eeq-B1-urK" firstAttribute="top" secondItem="H8l-jr-u1o" secondAttribute="bottom" constant="8.6666666666666856" id="f2O-T7-xKB"/>
+                            <constraint firstItem="H8l-jr-u1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qBC-bT-UCD"/>
+                            <constraint firstItem="1qX-yc-w2d" firstAttribute="top" secondItem="Bad-xO-9xu" secondAttribute="bottom" constant="63" id="rOJ-7F-1a1"/>
+                            <constraint firstItem="1qX-yc-w2d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFr-m6-2ql"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomText" destination="H8l-jr-u1o" id="Vfr-k7-5uI"/>
+                        <outlet property="calcSwitch" destination="Bad-xO-9xu" id="rEQ-4e-boj"/>
                         <outlet property="myLabel" destination="eeq-B1-urK" id="Dr2-a0-mGX"/>
+                        <outlet property="topText" destination="1qX-yc-w2d" id="yMr-ji-CdW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
