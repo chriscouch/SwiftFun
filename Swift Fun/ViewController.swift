@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var topText: UITextField!
     
-
+//Adding basic logic
     @IBAction func buttonTapped(_ sender: Any) {
         
         let addition = calcSwitch.isOn
