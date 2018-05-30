@@ -11,19 +11,30 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var count = 0
 
+    @IBOutlet weak var calcSwitch: UISwitch!
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var bottomText: UITextField!
+    @IBOutlet weak var topText: UITextField!
     
+
     @IBAction func buttonTapped(_ sender: Any) {
-        count += 1
         
-        if count == 10{
-       
-            view.backgroundColor = UIColor.red
-            myLabel.text = "That's 10!"
+        let addition = calcSwitch.isOn
+        
+        if addition {
+            let sum = Double(topText.text!)! + Double(bottomText.text!)!
+            myLabel.text = "\(topText.text!) +  \(bottomText.text!) = \(sum)"
+            
+        } else {
+            
+            let sum = Double(topText.text!)! - Double(bottomText.text!)!
+            myLabel.text = "\(topText.text!) -  \(bottomText.text!) = \(sum)"
         }
+
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
